@@ -1,5 +1,5 @@
-resource "aws_amplify_app" "amplify_test2" {
-  name       = "amplify_test2"
+resource "aws_amplify_app" "amplify_test3" {
+  name       = "amplify_test3"
   repository = "https://github.com/chris-cloudreach/testAmplifyGit"
 # GitHub personal access token
   access_token = ""
@@ -25,8 +25,8 @@ resource "aws_amplify_app" "amplify_test2" {
 }
 
 }
-resource "aws_amplify_branch" "develop" {
-  app_id      = aws_amplify_app.amplify_test2.id
-  branch_name = "master"
+resource "aws_amplify_branch" "AmplifyFeature" {
+  app_id      = aws_amplify_app.amplify_test3.id
+  branch_name = "main" # must match the branch name in github where all the files are
   stage     = "PRODUCTION"
 }
