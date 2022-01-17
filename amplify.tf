@@ -1,5 +1,5 @@
 resource "aws_amplify_app" "amplify_test_buildspec" {
-  name       = "amplify_test_buildspec"
+  name       = "WildRydesUsers"
   repository = "https://github.com/chris-cloudreach/testAmplifyGit"
 # GitHub personal access token
   access_token = ""
