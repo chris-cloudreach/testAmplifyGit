@@ -1,8 +1,17 @@
+# data "aws_cognito_user_pools" "selected" {
+#   name = WildRydes
+# }
+
+# data "aws_cognito_user_pool_clients" "main" {
+#   user_pool_id = [aws_cognito_user_pool.main.id]
+# }
+
+
 resource "aws_amplify_app" "amplify_test_buildspec" {
   name       = "WildRydesUsers"
   repository = "https://github.com/chris-cloudreach/testAmplifyGit"
 # GitHub personal access token
-  access_token = ""
+  access_token = "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"
 # The default rewrites and redirects added by the Amplify Console.
   custom_rule {
     source = "/<*>"
@@ -51,3 +60,4 @@ resource "aws_amplify_branch" "AmplifyFeature" {
   branch_name = "main" # must match the branch name in github where all the files are
   stage     = "PRODUCTION"
 }
+
