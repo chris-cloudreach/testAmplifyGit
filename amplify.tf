@@ -11,7 +11,7 @@ resource "aws_amplify_app" "amplify_test_buildspec" {
   name       = "WildRydesUsers"
   repository = "https://github.com/chris-cloudreach/testAmplifyGit"
 # GitHub personal access token
-  access_token = "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"
+  access_token = ""
 # The default rewrites and redirects added by the Amplify Console.
   custom_rule {
     source = "/<*>"
